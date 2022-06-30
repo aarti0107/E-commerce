@@ -1,0 +1,80 @@
+<!-- <nav>
+    <div class="navbar navbar-dark bg-primary shadow-sm ">
+        <div class="navbar-brand align-item-center d-flex">
+            <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="link" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                    <i class='fas fa-shipping-fast' style='font-size:35px;color:white'></i> 
+                </a>
+              
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="#">All products</a>
+                  <a class="dropdown-item" href="#">womens kurta</a>
+                  <a class="dropdown-item" href="#">heels</a>
+                  <a class="dropdown-item" href="#">shoes</a>
+                </div>
+              </div>
+            &nbsp;&nbsp;
+            <strong style="font: size 50px;"> My Store</strong>&nbsp;&nbsp;
+             <form class="form-group">
+                <input type="text" class="form-control" placeholder="search product">
+    
+            </form> 
+            <form class="d-flex">
+                <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search">
+            </form>  
+            <span class ="fas fa-search search-icon"></span>
+            
+              
+        </div>
+        <button class="btn btn-primary " routerLink="cart">
+            <i  style="font-size: 40px;" class="fas fa-cart-plus"></i>
+            <div class="badge bg-danger">{{totalitem}}</div>
+       </button>
+    </div>
+</nav><br><br> -->
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <i class='fas fa-shipping-fast' style='font-size:35px;color:white'></i> &nbsp; &nbsp;
+    <a class="navbar-brand text-white" href="#">My Store</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+         
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown"  >
+                <a  class="dropdown-item"  routerLink="/products">All product</a><hr>
+                <a class="dropdown-item" (click)="filter('filtercategory.category')" >womens kurta</a>
+                <a class="dropdown-item" (click)="filter('filtercategory.category')">heels</a>
+                <a class="dropdown-item" (click)="filter('filtercategory.category')">shoes</a>
+              
+              
+            </ul>
+          </li> -->
+          <li>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" [(ngModel)]="searchTerms" (keyup)= "search($event)" name="search" aria-label="Search">
+                <button class="btn btn-success" type="submit">Search</button>
+              </form>
+          </li>
+         
+        </ul>
+        
+      </div>
+  
+    
+            
+    <span>
+         <button class="btn btn-primary "  routerLink="cart">
+        <i  style="font-size: 40px;" class="fas fa-cart-plus"></i>
+        <div class="badge bg-danger">{{totalitem}} </div>
+   </button>
+</span>
+  </nav>

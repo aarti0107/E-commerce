@@ -1,0 +1,59 @@
+
+<ng-container *ngIf="productList.length != 0">
+    <div class="container d-flex justify-content-evenly">
+        <div class="card mb-3 mx-auto " style="max-width: 75%;  ">
+            <div class="row no-gutters " *ngFor="let item of productList">
+              <div class="col-md-4 " >
+                <img src="{{item.image}}" class="card-img" alt="..." >
+              </div>
+              <div class="col-md-8">
+                <div class="card-body ">
+                    <p class="card-text  "><strong>brand: </strong >{{item.brand}}</p>
+                  <p class="card-title "> <strong>Discreption:</strong> {{item.title}}</p>
+                  <p class="card-text "><strong>price:</strong> {{item.price}}</p>
+                  <p class="card-text "><strong>size:</strong> {{item.size}}</p>
+                  <button type="button" class="btn btn-danger " (click)="removeData(item)"> Remove</button>
+                  
+                  <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+                </div>
+              </div>
+            </div>
+           
+          </div>
+           
+    </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-center" >
+        <button class="btn btn-danger me-md-2" type="button" (click)="emptyCart()">Empty cart</button>&nbsp;
+        <button class="btn btn-primary" type="button" routerLink="/products">Add items</button>
+        <!-- <button class="btn btn-primary" type="button">Button</button> -->
+      </div>
+   
+    
+</ng-container>
+
+<div>
+    
+</div>
+<ng-container *ngIf="productList.length == 0">
+         <div class="container" >
+        <div class="row pt-5">
+            <div class="card mb-3 col-md-7  mx-auto  ">
+                <h5 class="card-title mt-1 "><strong> My cart</strong> </h5>
+                <div class="card-body   mx-auto">
+                    
+                
+                  <img src="../assets/empty.png" class="card-img-top mx-auto " alt="..." width="175px" height="75px" ><br>
+                 
+                  <p class="card-text text-center fw-bolder text-danger">your cart is empty</p>
+                  <p class="card-text text-center fw-bolder">add some item</p>
+                  <button class="btn btn-primary ms-4" routerLink="/products" type="button">Add Product</button>
+                  <!-- <a href="#" class="btn btn-primary text-center">shop now</a> -->
+            
+                </div>
+              </div>
+        </div>
+    </div>
+</ng-container>
+
+   
+

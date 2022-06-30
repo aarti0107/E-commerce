@@ -1,0 +1,56 @@
+
+ <ng-container class="bg-success ">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm p-3 mb-5 bg-white rounded">
+    <div class="container-fluid">
+      <a class="navbar-brand text-success" href="http://localhost:4200/products" > All Categories</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+       
+          <ul class="navbar-nav  gap-2  " >
+            <li class="nav-item">
+              <!-- <a class="navbar-brand text-success" (click)="filter('Womens kurta ')" > <strong>Woman Clothes </strong></a> -->
+              <button class="btn " type="submit" (click)="filter('womens kurta') ">Woman Clothes </button> 
+            </li>
+            <li class="nav-item">
+              <!-- <a class="navbar-brand text-success" (click)="filter('heels ')" > <strong>Heels </strong></a> -->
+               <button class="btn " type="submit" (click)="filter('heels ')">Heels</button> 
+            </li>
+            <li class="nav-item">
+              <!-- <a class="navbar-brand text-success" (click)="filter('heels ')" > <strong>Shoes </strong></a> -->
+               <button class="btn " type="submit"(click)="filter('shoes ')">Shoes</button> 
+            </li>
+            <li class="nav-item">
+              <!-- <button class="btn btn-secondary btn-lg" type="submit">Search</button> -->
+            </li>
+          </ul>
+       
+      </div>
+    </div>
+  </nav>
+
+
+<div>
+  <div class="container " >
+    <div class="row justify-content-center" >
+        <ng-container *ngFor="let product of productList | filter:searchKey:'title'">
+          <div class="card col-lg-3 col-md-4 col-sm-6 col-xs-12  " >
+            <!-- <div class="card " style="width: 18rem; "  > -->
+                <img src="{{product.image}}" class="card-img-top  " alt="..." >
+                <div class="card-body height:30% "  >
+                  <p class="card-text text-success">{{product.brand|titlecase}}</p>
+                  <h6 class="card-title ">{{product.title}} </h6>
+                  <strong> price: {{product.price}}</strong><br>
+                  <p><strong>size: </strong>{{product.size}}</p>
+                  <a  class="btn btn-primary" (click)="addtoCart(product)">add to cart</a>
+                <!-- </div> -->
+              </div>
+          </div>    
+        </ng-container>
+        </div>
+      </div>
+  </div>
+
+  
+</ng-container>
