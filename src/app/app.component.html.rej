@@ -1,8 +1,12 @@
 diff a/src/app/app.component.html b/src/app/app.component.html	(rejected hunks)
-@@ -1,4 +0,5 @@
--<app-header></app-header>
-+<app-header></app-header> 
-+test ..............
+@@ -1,9 +1,5 @@
+ <app-header></app-header>
+-change here.......
+-2nd change
+-3chande.....
+-4change..........
+-5change
++
  <!-- <app-product></app-product> -->
  <router-outlet>
      
